@@ -10,7 +10,7 @@ public class AlertAndPop {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "G:\\Selenium Drivers\\chromedriver_win32 (1)\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		//driver.get("http://demo.automationtesting.in/Alerts.html");
+		/*//driver.get("http://demo.automationtesting.in/Alerts.html");
 		driver.navigate().to("http://demo.automationtesting.in/Alerts.html");
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//button[contains(text(),'click the button to display an  alert box:')]")).click();
@@ -20,7 +20,14 @@ public class AlertAndPop {
 		String alertmsg = al.getText();
 		System.out.println(alertmsg);
 		al.accept();
-		driver.close();
+		driver.close();*/
+		
+		driver.get("http://demo.automationtesting.in/Windows.html");
+		driver.manage().window().maximize();
+		
+		//GetWindowHandle
+		String parentwindow = driver.getWindowHandle();
+		System.out.println("Parent Window" + parentwindow);
 		
 		
 
