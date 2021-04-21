@@ -42,22 +42,22 @@ public class WindowsHanldlingDemo {
 			
 		}
 		
-		for(String st : windows) {
+		/*for(String st : windows) {
 			System.out.println(st);
 			if(!parentwindow.equals(st)) {
 				driver.switchTo().window(st);
 				driver.findElement(By.xpath("//input[@id='gsc-i-id1']")).sendKeys("selenium");
 				driver.close();
 			}
-		}
+		}*/
 		
 		
 		/*driver.findElement(By.xpath("//input[@id='gsc-i-id1']")).sendKeys("selenium");
-		driver.close();
+		driver.close();*/
 		
 		driver.switchTo().window(parentwindow);
-		driver.findElement(By.xpath("//div[@id='Tabbed']//a")).click();*/
-		
+		driver.findElement(By.xpath("//div[@id='Tabbed']//a")).click();
+		driver.quit();
 
 		
 		
